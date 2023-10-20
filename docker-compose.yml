@@ -1,7 +1,8 @@
 version: "3"
 services:
   pg_master:
-    build: ./master
+    build: 
+      context: ./master
     volumes:
       - pg_master_data:/var/lib/postgresql/data
     environment:
