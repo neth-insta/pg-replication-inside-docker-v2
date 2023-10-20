@@ -1,11 +1,21 @@
 ### PostgreSQL Replication Inside Docker (difference server)
 
+- Install master database on 10.0.20.151
 ```shell
+$ ssh root@10.0.20.151
+$ cd pg-replication
 $ git clone https://github.com/neth-insta/pg-replication-inside-docker-v2.git
-$ cd pg-replication-inside-docker-v2
+$ cd master
 $ docker-compose up -d
+```
 
-$ rm -rf pg-replication-inside-docker-v2
+- Install slave database on 10.0.20.152
+```shell
+$ ssh root@10.0.20.151
+$ cd pg-replication
+$ git clone https://github.com/neth-insta/pg-replication-inside-docker-v2.git
+$ cd master
+$ docker-compose up -d
 ```
 
 ```shell
