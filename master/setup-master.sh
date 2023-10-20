@@ -11,4 +11,5 @@ archive_command = 'cd .'
 max_wal_senders = 8
 wal_keep_segments = 8
 hot_standby = on
+primary_conninfo = 'host=10.0.20.151 port=5432 user=$PG_REP_USER password=$PG_REP_PASSWORD'
 EOF
