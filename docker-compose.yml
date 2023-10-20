@@ -15,7 +15,10 @@ services:
         aliases:
           - pg_cluster
     ports:
-      - "8001:5432"
+      - "5432:5432"
+    deploy:
+      placement:
+        constraints: [node.hostname == 10.0.20.151]
   pg_slave:
     build: ./slave
     volumes:
@@ -31,7 +34,10 @@ services:
         aliases:
           - pg_cluster
     ports:
-      - "8002:5432"
+      - "5433:5432"
+    deploy:
+      placement:
+        constraints: [node.hostname == 10.0.20.152]
 volumes:
   pg_master_data:
   pg_slave_data:
