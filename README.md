@@ -10,6 +10,8 @@ $ rm -rf pg-replication-inside-docker-v2
 
 ```shell
 $ docker-compose up -d
+$ docker-compose down -v
+$ docker-compose up -d --build
 
 $ docker ps
 $ docker volume ls
