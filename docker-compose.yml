@@ -16,9 +16,6 @@ services:
           - pg_cluster
     ports:
       - "5432:5432"
-    deploy:
-      placement:
-        constraints: [node.hostname == 10.0.20.151]
   pg_slave:
     build: ./slave
     volumes:
@@ -35,9 +32,6 @@ services:
           - pg_cluster
     ports:
       - "5433:5432"
-    deploy:
-      placement:
-        constraints: [node.hostname == 10.0.20.152]
 volumes:
   pg_master_data:
   pg_slave_data:
