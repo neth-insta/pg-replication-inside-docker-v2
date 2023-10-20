@@ -1,9 +1,10 @@
 version: "3"
 services:
-  pg_slave:
-    build: ./slave
+  pg_master:
+    build: 
+      context: ./master
     volumes:
-      - pg_slave_data:/var/lib/postgresql/data
+      - pg_master_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=ORD@@hms58770
@@ -17,4 +18,4 @@ services:
     ports:
       - "5432:5432"
 volumes:
-  pg_slave_data:
+  pg_master_data:
