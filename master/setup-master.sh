@@ -9,5 +9,4 @@ ALTER SYSTEM SET archive_command = 'cd .';
 ALTER SYSTEM SET max_wal_senders = 8;
 ALTER SYSTEM SET wal_keep_segments = 8;
 ALTER SYSTEM SET hot_standby = on;
-ALTER SYSTEM SET primary_conninfo = 'host=pg_master port=5432 user=$PG_REP_USER password=$PG_REP_PASSWORD';
 EOSQL
