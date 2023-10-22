@@ -17,6 +17,6 @@ services:
         aliases:
           - pg_cluster
     ports:
-      - "5432:5432"
+      - "7001:5432"
 volumes:
   pg_master_data:

@@ -11,12 +11,12 @@ services:
       - PG_REP_USER=rep
       - PG_REP_PASSWORD=rep_123456
       - MASTER_DB_HOST=10.0.20.151
-      - MASTER_DB_PORT=5432
+      - MASTER_DB_PORT=7001
     networks:
       default:
         aliases:
           - pg_cluster
     ports:
-      - "5432:5432"
+      - "7002:5432"
 volumes:
   pg_slave_data:
