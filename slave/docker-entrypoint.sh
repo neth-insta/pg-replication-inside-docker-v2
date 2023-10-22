@@ -16,7 +16,7 @@ echo "host replication all 0.0.0.0/0 md5" >> "$PGDATA/pg_hba.conf"
 set -e
 cat > ${PGDATA}/recovery.conf <<EOF
 standby_mode = on
-primary_conninfo = 'host=10.0.20.151 port=6190 user=$PG_REP_USER password=$PG_REP_PASSWORD'
+primary_conninfo = 'host=10.0.20.151 port=5432 user=$PG_REP_USER password=$PG_REP_PASSWORD'
 trigger_file = '/tmp/touch_me_to_promote_to_me_master'
 EOF
 chown postgres. ${PGDATA} -R
