@@ -14,7 +14,7 @@ $ docker-compose up -d
 $ ssh root@10.0.20.151
 $ cd pg-replication
 $ git clone https://github.com/neth-insta/pg-replication-inside-docker-v2.git
-$ cd master
+$ cd slave
 $ docker-compose up -d
 ```
 
