@@ -21,7 +21,7 @@ $ docker-compose up -d
 ```shell
 $ cd pg-replication/pg-replication-inside-docker-v2
 $ docker-compose up -d
-$ docker-compose down -v
+$ docker-compose down
 $ docker-compose up -d --build
 
 $ docker ps
