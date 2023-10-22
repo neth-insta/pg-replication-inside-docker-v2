@@ -11,6 +11,7 @@ services:
       - POSTGRES_DB=hms_prod
       - PG_REP_USER=rep
       - PG_REP_PASSWORD=rep_123456
+      - MASTER_DB_HOST=10.0.20.151
     networks:
       default:
         aliases:
