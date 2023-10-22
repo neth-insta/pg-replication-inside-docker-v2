@@ -28,3 +28,9 @@ $ docker ps
 $ docker volume ls
 $ docker network ls
 ```
+
+- In case sometimes when we change any configuration and run ` docker-compose up -d ` you still see nothing change it maybe cache issue we can reboot server and try again:
+
+```shell
+$ reboot
+```
