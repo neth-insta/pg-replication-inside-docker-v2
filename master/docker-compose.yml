@@ -7,15 +7,15 @@ services:
       - pg_master_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=ORD@@hms58770
+      - POSTGRES_PASSWORD=123456
       - POSTGRES_DB=hms_prod
       - PG_REP_USER=rep
-      - PG_REP_PASSWORD=rep_ORD@@hms58770
+      - PG_REP_PASSWORD=rep_123456
     networks:
       default:
         aliases:
           - pg_cluster
     ports:
-      - "5432:5432"
+      - "6190:5432"
 volumes:
   pg_master_data:
